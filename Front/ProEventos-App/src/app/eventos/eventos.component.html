@@ -2,18 +2,23 @@
 
 <hr>
 
-<form class="row row-cols-lg-auto g-3 align-items-center" action="">
+<div class="row row-cols-lg-auto g-3 align-items-center" >
   <div>
     <label class="visually-hidden" for="inlineFormInputGroupUsername"></label>
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="buscar" />
+      <input
+      type="text"
+      class="form-control"
+      placeholder="buscar"
+      [(ngModel)]="filtroLista"
+      />
     </div>
   </div>
   <div>
     <button type="submit" class="btn btn-outline-success">Buscar</button>
   </div>
-</form>
-
+</div>
+ <h3>Filtro: {{filtroLista}}</h3>
 <hr>
 
 <table class="table">
@@ -32,7 +37,7 @@
     </tr>
   </thead>
   <tbody *ngIf="eventos && eventos.length">
-    <tr *ngFor="let evento of eventos">
+    <tr *ngFor="let evento of eventosFiltrados">
       <td class="text-center">
         <img [collapse]="!mostrarImg" [isAnimated]="true" src="/assets/{{evento.imageURL}}" [style.width.px]="larguraImg"  [style.margin.px]="margemImg">
       </td>
