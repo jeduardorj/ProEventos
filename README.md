@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## dotnet watch run
+Faz com rode o swagger no `https://localhost:5001/swagger/index.html` direto sem que eu tenha que digitar no navegador ele abre sozinho
+
+## ng serve
+Comando para rodar o backend `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
